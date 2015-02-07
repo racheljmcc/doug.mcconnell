@@ -1,0 +1,699 @@
+*,
+*:before,
+*:after {
+    box-sizing: border-box;
+}
+
+.clearfix:before,
+.clearfix:after {
+    content: " "; /* 1 */
+    display: table; /* 2 */
+}
+
+  .clearfix:after {
+    clear: both;
+}
+
+body {
+	background: white;
+	font-family: Cambria;	
+}
+
+a {
+	text-decoration: none;
+}
+
+a:link,
+a:visited {
+	color: black;
+}
+
+a:hover,
+a:active {
+	color: #777777;
+}
+
+a:focus {
+	border: 1px dotted grey;
+}
+
+
+img {
+    max-width: 100%;
+}
+
+.hamburger {
+    color: black;
+    font-size: 2em;
+    display: block;
+    margin: 0.2em;
+    float: right;
+    text-decoration: none;
+}
+
+.categories li,
+.main_menu li {
+	display: inline-block;
+	list-style: none;
+    padding-bottom: 10px;
+}
+
+.main_menu,
+.categpries {
+    padding-left: 25px;
+}
+
+.hero {
+    background: url(../images/2116320275_a6c80ef91a_b.jpg);
+    background-size: cover;
+    background-position: center center;
+    background-repeat: no-repeat;
+    width: 100%;
+    min-height: 400px;
+}
+
+.hero-block {
+    background-color: white;
+    background-color: rgba(255,255,255,0.8);
+    box-shadow: 0 0 3px #333;
+}
+
+.hero-text {
+    color: black;
+    font-family: cambria;
+    font-size: 2em;
+    margin-top: 300px;
+    padding: 0 30px;
+    text-align: center;
+}
+
+.welcome {
+    font-size: 1em;
+    text-align: center;
+}
+
+.boxes {
+    border: 1px solid black;
+    list-style: none;
+    margin: 0 auto;
+    min-height: 75px;
+    padding: 5px;
+}
+
+.modal {
+    display: none;
+}
+
+.works{
+    text-align: center;
+    padding: 0;
+    list-style-type: none;
+}
+
+/*Contact Page*/
+
+#contact-form {
+    background-color:#F2F7F9;
+    width:465px;
+    padding:20px;
+    margin: 50px auto;    
+    border: 6px solid #8FB5C1;
+    -moz-border-radius:15px;
+    -webkit-border-radius:15px;
+    border-radius:15px;
+    position:relative;
+}
+ 
+#contact-form h1 {
+    font-size:42px;
+}
+ 
+#contact-form h2 {
+    margin-bottom:15px;
+    font-style:italic;
+    font-weight:normal;
+}
+ 
+#contact-form input, 
+#contact-form select, 
+#contact-form textarea, 
+#contact-form label {
+    font-size:15px;
+    margin-bottom:2px;
+}
+ 
+#contact-form input, 
+#contact-form select, 
+#contact-form textarea {
+    width:410px;
+    border: 1px solid #CEE1E8;
+    margin-bottom:20px;
+    padding:4px;
+}
+ 
+#contact-form input:focus, 
+#contact-form select:focus, 
+#contact-form textarea:focus {
+    border: 1px solid #AFCDD8;
+    background-color: #EBF2F4;
+}
+ 
+#contact-form textarea {
+    height:150px;
+    resize: none;
+}
+ 
+#contact-form label {
+    display:block;
+}
+ 
+#contact-form .required {
+    font-weight:bold;
+    color:#F00;    
+}
+ 
+#contact-form #submit-button {
+    width: 100px;
+    background-color:#333;
+    color:#FFF;
+    border:none;
+    display:block;
+    float:right;
+    margin-bottom:0px;
+    margin-right:6px;
+    background-color:#8FB5C1;
+    -moz-border-radius:8px;
+}
+ 
+#contact-form #submit-button:hover {
+    background-color: #A6CFDD;
+}
+ 
+#contact-form #submit-button:active {
+    position:relative;
+    top:1px;
+}
+ 
+#contact-form #loading {
+    width:32px;
+    height:32px;
+    background-image:url(../img/loading.gif);
+    display:block;
+    position:absolute;
+    right:130px;
+    bottom:16px;
+    display:none;
+}
+ 
+#errors {
+    border:solid 1px #E58E8E;
+    padding:10px;
+    margin:25px 0px;
+    display:block;
+    width:437px;
+    -webkit-border-radius:8px;
+    -moz-border-radius:8px;
+    border-radius:8px;
+    background:#FFE6E6 url(../img/cancel_48.png) no-repeat 405px center;
+    display:none;
+}
+ 
+#errors li {
+    padding:2px;
+    list-style:none;    
+}
+ 
+#errors li:before {
+    content: ' - ';    
+}
+ 
+#errors #info {
+    font-weight:bold;
+}
+ 
+#errors #info:before {
+    content: '';    
+}
+ 
+#success {
+    border:solid 1px #83D186;
+    padding:25px 10px;
+    margin:25px 0px;
+    display:block;
+    width:437px;
+    -webkit-border-radius:8px;
+    -moz-border-radius:8px;
+    border-radius:8px;
+    background:#D3EDD3 url(../img/accepted_48.png) no-repeat 405px center;
+    font-weight:bold;
+    display:none;
+}
+ 
+#errors.visible, #success.visible {
+    display:block;    
+}
+ 
+#req-field-desc {
+    font-style:italic;
+}
+ 
+/* Remove box shadow firefox, chrome and opera put around required fields. It looks rubbish. */
+input:required, textarea:required {
+    -moz-box-shadow:none;
+    -webkit-box-shadow:none;
+    -o-box-shadow:none;
+    box-shadow:none;
+}
+ 
+/* Normalize placeholder styles */
+ 
+/* chrome, safari */
+::-webkit-input-placeholder {
+    color:#CCC;
+    font-style:italic;
+}
+ 
+/* mozilla */
+input:-moz-placeholder, textarea:-moz-placeholder {
+    color:#CCC;
+    font-style:italic;
+}
+ 
+/* ie (faux placeholder) */
+input.placeholder-text, textarea.placeholder-text  { 
+    color:#CCC;
+    font-style:italic;
+}
+
+
+/*Start Desktop Styles*/
+
+@media screen and (min-width: 750px) {
+
+body {
+    background: #09132A;
+    font-family: Cambria;   
+}
+
+.container {
+	background: white;
+    border: 1px #777777 solid;
+    border-radius: 10px;
+    margin: 0 auto;
+    padding-top: 116px;
+	width: 960px;
+    }
+
+.box,
+footer {
+    width: 960px;
+}
+
+header {
+	background-image: url('../images/raven-header.jpg');
+	background-repeat: no-repeat; 
+	background-size: cover;
+	border-bottom: 1px #777777 solid;
+    border-top: 1px #777777 solid;
+    border-radius: 10px;
+	position: fixed;
+	top: 0;
+	width: 960px;
+    }
+
+.name {
+    margin-top: 0;
+    padding-left: 25px;
+}
+
+.landing-img {
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.bio-img {
+    float: left;
+    height: auto;
+    margin-right: 20px;
+    padding-left: 25px;
+}
+
+.news-img {
+    width: 300px;
+    float: left;
+    height: auto;
+    margin-right: 20px;
+    padding-left: 25px;
+}
+
+.logo-img {
+    border: none;
+    padding-right: 10px;
+    width: 285px;
+}
+
+.accordion-img {
+    float: right;
+    width: 550px;
+    padding-right: 40px;
+}
+
+ .hero {
+    background: url(../images/2116320275_a6c80ef91a_b.jpg);
+    background-size: cover;
+    background-position: center center;
+    background-repeat: no-repeat;
+    width: 100%;
+    min-height: 400px;
+}
+
+.hero-block {
+    background-color: white;
+    background-color: rgba(255,255,255,0.8);
+    box-shadow: 0 0 3px #333;
+}
+
+.hero-text {
+    color: black;
+    font-family: cambria;
+    font-size: 2em;
+    margin-top: 300px;
+    padding: 0 30px;
+    text-align: center;
+}
+
+.current {
+    border-right: 1px #777777 solid;
+    border-radius: 10px;
+    float: left;
+    width: 70%;
+}
+
+.ago,
+.bio,
+.guest,
+.recital {
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    max-width: 600px;
+    padding-left: 0;
+}
+
+.news,
+.title,
+.ago {
+    padding-left: 25px;
+}
+
+
+.logo,
+.upcoming {
+    border-top: 1px #777777 solid;
+    border-radius: 10px;
+    float: right;
+    padding-left: 10px;
+    width: 30%;
+}   
+
+.event,
+.logo-text {
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    max-width: 280px;
+    padding-left: 0;
+    padding-right: 10px;
+}
+
+.hamburger {
+	display: none;
+
+}
+
+.cv {
+    line-height: 1.5em;
+    /*list-style: none;*/
+}
+
+
+/*Display Options: Gallery (mobile), Modal, Carousel*/
+
+.boxes,
+.works {
+    display: none;
+}
+
+.modalDialog {
+    position: fixed;
+    font-family: Arial, Helvetica, sans-serif;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    background: rgba(0,0,0,0.8);
+    z-index: 99999;
+    opacity:0;
+    -webkit-transition: opacity 400ms ease-in;
+    -moz-transition: opacity 400ms ease-in;
+    transition: opacity 400ms ease-in;
+    pointer-events: none;
+}
+
+.modal {
+    display: block;
+    float: left;
+    list-style: none;
+}
+
+.modalDialog:target {
+    opacity:1;
+    pointer-events: auto;
+}
+
+.modalDialog > div {
+    width: 400px;
+    position: relative;
+    margin: 10% auto;
+    padding: 5px 20px 13px 20px;
+    border-radius: 10px;
+    background: #fff;
+    background: -moz-linear-gradient(#fff, #999);
+    background: -webkit-linear-gradient(#fff, #999);
+    background: -o-linear-gradient(#fff, #999);
+}
+
+.close {
+    background: #606061;
+    color: #FFFFFF;
+    line-height: 25px;
+    position: absolute;
+    right: -12px;
+    text-align: center;
+    top: -10px;
+    width: 24px;
+    text-decoration: none;
+    font-weight: bold;
+    -webkit-border-radius: 12px;
+    -moz-border-radius: 12px;
+    border-radius: 12px;
+    -moz-box-shadow: 1px 1px 3px #000;
+    -webkit-box-shadow: 1px 1px 3px #000;
+    box-shadow: 1px 1px 3px #000;
+}
+
+.close:hover { background: #00d9ff; }
+
+.copyright:after {
+    content: ' | ';
+}
+
+.copyright:last-child:after {
+    content: ' ';
+}
+
+.copyright {
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    text-align: center;
+    width: 960px;
+}
+
+/*Contact Page*/
+
+#contact-form {
+    background-color:#F2F7F9;
+    width:465px;
+    padding:20px;
+    margin: 50px auto;    
+    border: 6px solid black;
+    -moz-border-radius:15px;
+    -webkit-border-radius:15px;
+    border-radius:15px;
+    position:relative;
+}
+ 
+#contact-form h1 {
+    font-size:42px;
+}
+ 
+#contact-form h2 {
+    margin-bottom:15px;
+    font-style:italic;
+    font-weight:normal;
+}
+ 
+#contact-form input, 
+#contact-form select, 
+#contact-form textarea, 
+#contact-form label {
+    font-size:15px;
+    margin-bottom:2px;
+}
+ 
+#contact-form input, 
+#contact-form select, 
+#contact-form textarea {
+    width:410px;
+    border: 1px solid #CEE1E8;
+    margin-bottom:20px;
+    padding:4px;
+}
+ 
+#contact-form input:focus, 
+#contact-form select:focus, 
+#contact-form textarea:focus {
+    border: 1px solid #AFCDD8;
+    background-color: #EBF2F4;
+}
+ 
+#contact-form textarea {
+    height:150px;
+    resize: none;
+}
+ 
+#contact-form label {
+    display:block;
+}
+ 
+#contact-form .required {
+    font-weight:bold;
+    color:#F00;    
+}
+ 
+#contact-form #submit-button {
+    width: 100px;
+    background-color:#333;
+    color:#FFF;
+    border:none;
+    display:block;
+    float:right;
+    margin-bottom:0px;
+    margin-right:6px;
+    background-color:#8FB5C1;
+    -moz-border-radius:8px;
+}
+ 
+#contact-form #submit-button:hover {
+    background-color: #A6CFDD;
+}
+ 
+#contact-form #submit-button:active {
+    position:relative;
+    top:1px;
+}
+ 
+#contact-form #loading {
+    width:32px;
+    height:32px;
+    background-image:url(../img/loading.gif);
+    display:block;
+    position:absolute;
+    right:130px;
+    bottom:16px;
+    display:none;
+}
+ 
+#errors {
+    border:solid 1px #E58E8E;
+    padding:10px;
+    margin:25px 0px;
+    display:block;
+    width:437px;
+    -webkit-border-radius:8px;
+    -moz-border-radius:8px;
+    border-radius:8px;
+    background:#FFE6E6 url(../img/cancel_48.png) no-repeat 405px center;
+    display:none;
+}
+ 
+#errors li {
+    padding:2px;
+    list-style:none;    
+}
+ 
+#errors li:before {
+    content: ' - ';    
+}
+ 
+#errors #info {
+    font-weight:bold;
+}
+ 
+#errors #info:before {
+    content: '';    
+}
+ 
+#success {
+    border:solid 1px #83D186;
+    padding:25px 10px;
+    margin:25px 0px;
+    display:block;
+    width:437px;
+    -webkit-border-radius:8px;
+    -moz-border-radius:8px;
+    border-radius:8px;
+    background:#D3EDD3 url(../img/accepted_48.png) no-repeat 405px center;
+    font-weight:bold;
+    display:none;
+}
+ 
+#errors.visible, #success.visible {
+    display:block;    
+}
+ 
+#req-field-desc {
+    font-style:italic;
+}
+ 
+/* Remove box shadow firefox, chrome and opera put around required fields. It looks rubbish. */
+input:required, textarea:required {
+    -moz-box-shadow:none;
+    -webkit-box-shadow:none;
+    -o-box-shadow:none;
+    box-shadow:none;
+}
+ 
+/* Normalize placeholder styles */
+ 
+/* chrome, safari */
+::-webkit-input-placeholder {
+    color:#CCC;
+    font-style:italic;
+}
+ 
+/* mozilla */
+input:-moz-placeholder, textarea:-moz-placeholder {
+    color:#CCC;
+    font-style:italic;
+}
+ 
+/* ie (faux placeholder) */
+input.placeholder-text, textarea.placeholder-text  { 
+    color:#CCC;
+    font-style:italic;
+}
+
+}
